@@ -1,0 +1,4 @@
+
+sudo ln -s ~/cnrsCircuit/src /var/www/html
+
+source : http://doc.ubuntu-fr.org/tutoriel/lamp_repertoires_de_travail
