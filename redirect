@@ -1,4 +1,6 @@
 
+redirection a faire pour que le dossier de travail soit dans var/www/html/
+
 sudo ln -s ~/cnrsCircuit/src /var/www/html
 
 source : http://doc.ubuntu-fr.org/tutoriel/lamp_repertoires_de_travail
