@@ -9,7 +9,7 @@
             while ($idA_nom = $idA_nom_list->fetch())
             {
             ?>
-            <li><a href= <?php echo "atelier.php?" . $idA_nom['idA']?> ><?php echo $idA_nom['nom']; ?></a></li>
+            <li><a href= <?php echo "atelier.php?idA=" . $idA_nom['idA']?> ><?php echo $idA_nom['nom']; ?></a></li>
             <?php
             }
             $idA_nom_list->closeCursor(); // Termine le traitement de la requête
