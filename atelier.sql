@@ -31,7 +31,9 @@ CREATE TABLE `atelier` (
   `labo` varchar(30) NOT NULL,
   PRIMARY KEY (`idA`),
   UNIQUE KEY `nom` (`nom`),
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  KEY `idT` (`theme`),
+  KEY `idT_2` (`theme`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +42,7 @@ CREATE TABLE `atelier` (
 
 LOCK TABLES `atelier` WRITE;
 /*!40000 ALTER TABLE `atelier` DISABLE KEYS */;
+INSERT INTO `atelier` VALUES (3,'terre des lasers','visite du LMJ et de l\'exposition terre des lasers','physique','le barp','CEA'),(4,'l\'émultion','crème solaire, mayonnaise et bitume','chimie','pessac','CRPP'),(5,'homo oeconomicus','participez à des jeux et découvrez qui vous êtes','économie','pessac','Gretha'),(6,'les molecules','premier pipshow moléculaire','chimie','talence','ISM');
 /*!40000 ALTER TABLE `atelier` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-09-26 17:11:19
+-- Dump completed on 2014-09-26 17:57:25
