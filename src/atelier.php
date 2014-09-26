@@ -5,7 +5,7 @@
 <body>
 
 <?php
-<!-- recupere tout les champs dans la BD de l'atelier numéroté-->
+
 $bdd=new PDO('mysql:host=localhost;dbname=cnrs', 'root', 'group6');
 $query = ("SELECT * FROM atelier WHERE idA ='%s'", $_GET['idA']);
 $result = mysql_query($query);
