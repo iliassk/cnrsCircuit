@@ -1,38 +1,32 @@
 <!DOCTYPE html>
+
 <html>
     <head>
         <title>Ceci est une page de test avec des balises PHP</title>
         <meta charset="utf-8" />
     </head>
     <body>
-        <h3></h3>
+
+	<?php
+	try
+	{
+    	$bdd = new PDO('mysql:host=localhost;dbname=cnrs', 'root', 'groupe6');
+	}
+	catch (Exception $e)
+	{
+        die('Erreur : ' . $e->getMessage());
+	}
+	?>
         
-	<?php include("menu.php"); ?>
+	<?php include("menu-ateliers.php"); ?>
 
         <p>
-            Voici quelques petits tests :
-        </p>
-        
-        <ul>
-        <li style="color: blue;">Texte en bleu</li>
-        <li style="color: red;">Texte en rouge</li>
-        <li style="color: green;">Texte en vert</li>
-        </ul>
+        <br />
+        <br />
+            Ajouter un atelier :
+        </p>        
         
         <?php include("formulaire-ajout-atelier.php"); ?>
-
-      <?php
-		$monfichier = fopen('compteur.txt', 'a+');
-
-		$nb_vues = fgets($monfichier);
-		$nb_vues++;
-		fseek($monfichier,0);
-		fputs($monfichier, $nb_vues);
-
-
-		fclose($monfichier);
-		echo 'Page vue ' . $nb_vues . ' fois.';
-		?>
 
     </body>
 </html>
