@@ -1,29 +1,30 @@
-<html>
 
-<title> atelier </title>
 
-<body>
 
 <?php
-
-$bdd=new PDO('mysql:host=localhost;dbname=cnrs', 'root', 'group6');
-$query = ("SELECT * FROM atelier WHERE idA ='%s'", $_GET['idA']);
-$result = mysql_query($query);
+try {
+    $con=new PDO('mysql:host=localhost;dbname=cnrs', 'root', 'group6');
+    $sql = 'SELECT * FROM atelier';
+    $result = $con->query($sql);
+    $all = $result->fetchAll(PDO::FETCH_NUM);
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
 ?>
-
-<!-- affiche les informations-->
-nom : <?php echo $row['nom']; ?> 
-lieu : <?php echo $row['lieu']; ?> 
-theme : <?php echo $row['theme']; ?> 
-laboratoire : <?php echo $row['labo']; ?>
-
-descriptif : <?php echo $row['descriptif']; ?>
-
-<php
-<!-- libere espace memoire -->
-mysql_free_result($result);
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PDO: Fetching All Rows</title>
+</head>
+<body>
+<h1>Détails des ateliers</h1>
+<?php if (isset($error)) {
+    echo "<p>$error</p>";
+}
 ?>
-
+<pre>
+<?php print_r($all); ?>
+</pre>
 </body>
-
 </html>
