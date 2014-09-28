@@ -1,12 +1,12 @@
-<form method="post" action="frontpage.php">
+<form method="post" action="index.php">
  
 <p>
 	Intitulé de l'atelier : 
-    <input type="text" name="intitule_atelier" /> <br />
+    <input type="text" name="intitule_atelier" placeholder="Titre" /> <br />
     Laboratoire :
-    <input type="text" name="laboratoire" /> <br />
+    <input type="text" name="laboratoire" placeholder="Laboratoire"/> <br />
     Lieu : <br />
-	<input type="text" name="lieu" /> <br />
+	<input type="text" name="lieu" placeholder="Lieux"/> <br />
     Dicipline : <br />
 
     <select name="discipline">
@@ -18,9 +18,7 @@
 	</select> <br />
 	<br />
     Descriptif de l'atelier : <br />
-    <textarea name="descriptif" rows="8" cols="45">
-    Entrer le descriptif de l'atelier.	
-    </textarea>
+    <textarea name="descriptif" rows="8" cols="45" placeholder="Entrez la description de l'atelier"></textarea>
 
     <input type="submit" name="valider" />
 </p>
