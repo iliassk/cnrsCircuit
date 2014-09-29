@@ -72,12 +72,12 @@ $result = $req->fetch();
 
 <form method="post" action= "<?php echo "modifier-atelier.php?idA=" . $idA ?>">
 
-	<input type="submit" value="modifer" />
+	<input type="submit" value="Modifier" />
 </form>
 
 <form method="post" action="index.php">
 
-  <input type="submit" value="Retour acceuil">
+  <input type="submit" value="Lister les ateliers">
 </form>
 
 
