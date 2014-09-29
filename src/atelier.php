@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title> Atelier </title>
-		 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
+		 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
 	<body>
 
@@ -61,7 +61,7 @@ $result = $req->fetch();
 
 <p>Descriptif : <?php echo $result['descriptif']; ?></p>
 <?php
-//$req->closeCursor(); // Termine le traitement de la requête
+//$req->closeCursor(); // Termine le traitement de la requÃªte
 ?>
 
 <form method="post" action= "<?php echo "index.php?delete=" . $idA ?>">
