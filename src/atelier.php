@@ -54,12 +54,12 @@ $result = $req->fetch();
 ?>
 <h1>Description de l'atelier</h1>
 
-<p>Nom : <?php echo $result['nom']; ?> </p>
-<p>Lieu : <?php echo $result['lieu']; ?> </p>
-<p>Theme : <?php echo $result['theme']; ?> </p>
-<p>Laboratoire : <?php echo $result['labo']; ?></p>
+<p id="nom">Nom : <?php echo $result['nom']; ?> </p>
+<p id="lieu">Lieu : <?php echo $result['lieu']; ?> </p>
+<p id="theme">Theme : <?php echo $result['theme']; ?> </p>
+<p id="laboratoire">Laboratoire : <?php echo $result['labo']; ?></p>
 
-<p>Descriptif : <?php echo $result['descriptif']; ?></p>
+<p id="descriptif">Descriptif : <?php echo $result['descriptif']; ?></p>
 <?php
 //$req->closeCursor(); // Termine le traitement de la requÃªte
 ?>
